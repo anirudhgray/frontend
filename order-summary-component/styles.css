@@ -1,0 +1,143 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background: hsl(225, 100%, 94%);
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div {
+    width: 380px;
+    height: 590px;
+    border-radius: 14px;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0px 10px 12px -6px rgb(0,0,0,0.1);
+}
+
+.banner-div img {
+    width: 100%;
+    height: 100%;
+}
+
+.info-div {
+    margin: 9%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-div h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight:800;
+}
+
+.info-text p {
+    text-align: center;
+    color: rgb(128, 128, 128);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding-left: 6%;
+    padding-right: 6%;
+    margin-bottom: 6%;
+    line-height: 1.4;
+}
+
+.plan-details {
+    background: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.name-cost {
+    padding-right: 50px;
+}
+
+.plan-details h2 {
+    margin: 0;
+    margin-bottom: 6%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.plan-details p {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: rgb(128, 128, 128);
+}
+
+.plan-details img {
+    height: 50px;
+}
+
+.change {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+}
+
+.change:hover {
+    color: hsl(245, 48%, 61%);
+}
+
+.proceed-button {
+    font-weight: bold;
+    text-align: center;
+    max-width: 100%;
+    padding:4%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    background: hsl(245, 75%, 52%);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 14px 17px hsl(223, 80%, 86%);
+}
+
+.proceed-button:hover {
+    background: hsl(245, 48%, 61%);
+}
+
+.cancel-button {
+    max-width: max-content;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(128, 128, 128);
+    text-decoration: none;
+}
+
+.cancel-button:hover {
+    color: black;
+}
+
+.cancel-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
