@@ -1,22 +1,24 @@
-body, html {
+html {
     height: 100%;
-    width: 100%;
 }
 
 body {
+    padding-top: 150px;
+    padding-bottom: 100px;
     margin:0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: hsl(0, 0%, 95%);
+    justify-self: center;
 }
 
 .main {
     margin: 10px;
     display: flex;
     border-radius: 8px;
-    overflow:auto;
+    overflow:hidden;
     display: flex;
     flex-direction: row;
 }
