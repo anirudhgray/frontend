@@ -50,6 +50,7 @@ body {
     margin-bottom: 30px;
     color: hsl(0, 0%, 95%);
     font-family: 'Big Shoulders Display', cursive;
+    font-size: 40px;
 }
 
 .car-card p {
@@ -67,16 +68,32 @@ body {
     padding-left: 25px;
     background: hsl(0, 0%, 95%);
     border-radius: 40px;
-    margin-top: 70px;
+    margin-top: 60px;
     display: inline-block;
+    text-decoration: none;
 }
 
 #sedan a {
     color: hsl(31, 77%, 52%);
 }
+#sedan a:hover {
+    color: hsl(0, 0%, 95%);
+    border: 3px solid hsl(0, 0%, 95%);
+    background: hsl(31, 77%, 52%);
+}
 #suv a {
     color: hsl(184, 100%, 22%);
 }
+#suv a:hover {
+    color: hsl(0, 0%, 95%);
+    border: 3px solid hsl(0, 0%, 95%);
+    background: hsl(184, 100%, 22%);
+}
 #luxury a {
     color: hsl(179, 100%, 13%);
+}
+#luxury a:hover {
+    color: hsl(0, 0%, 95%);
+    border: 3px solid hsl(0, 0%, 95%);
+    background: hsl(179, 100%, 13%);
 }
