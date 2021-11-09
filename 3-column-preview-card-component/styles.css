@@ -1,0 +1,82 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding-top: 150px;
+    padding-bottom: 100px;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 95%);
+    justify-self: center;
+}
+
+.main {
+    margin: 10px;
+    display: flex;
+    border-radius: 8px;
+    overflow:hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 800px) {
+    .main {
+        flex-direction: column;
+    }
+}
+
+.car-card {
+    width: 210px;
+    height: 400px;
+    padding: 50px;
+}
+
+#sedan {
+    background: hsl(31, 77%, 52%);
+}
+#suv {
+    background: hsl(184, 100%, 22%);
+}
+#luxury {
+    background: hsl(179, 100%, 13%);
+}
+
+.car-card h1 {
+    margin-top: 35px;
+    margin-bottom: 30px;
+    color: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.car-card p {
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    line-height: 1.7;
+}
+
+.car-card a {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: 12px;
+    padding-right: 25px;
+    padding-left: 25px;
+    background: hsl(0, 0%, 95%);
+    border-radius: 40px;
+    margin-top: 70px;
+    display: inline-block;
+}
+
+#sedan a {
+    color: hsl(31, 77%, 52%);
+}
+#suv a {
+    color: hsl(184, 100%, 22%);
+}
+#luxury a {
+    color: hsl(179, 100%, 13%);
+}
