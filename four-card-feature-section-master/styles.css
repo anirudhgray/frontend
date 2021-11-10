@@ -60,11 +60,10 @@ p, h1, h2, br {
     height: 250px;
     background: white;
     margin: 15px;
-    box-shadow: 0px 10px 15px -15px hsl(229, 6%, 66%);
+    box-shadow: 0px 17px 25px -10px hsl(229, 6%, 66%);
     padding: 35px;
     display: flex;
     flex-direction: column;
-    border-top: 4px solid;
     border-radius: 6px;
     background-clip: padding-box;
 }
@@ -85,20 +84,31 @@ p, h1, h2, br {
     margin-top: auto;
 }
 
-#supervisor {
-    border-top-color:hsl(180, 62%, 55%);
+.card::before {
+    content: "";
+    position: relative;
+    height: 4px;
+    width: 340px;
+    bottom: 35px;
+    right:35px;
+    border-top-left-radius:6px;
+    border-top-right-radius: 6px;
 }
 
-#karma {
-    border-top-color: hsl(34, 97%, 64%);
+#supervisor::before {
+    background:hsl(180, 62%, 55%)
 }
 
-#team-build {
-    border-top-color: hsl(0, 78%, 62%);
+#karma::before {
+    background: hsl(34, 97%, 64%);
 }
 
-#calculator {
-    border-top-color: hsl(212, 86%, 64%);
+#team-build::before {
+    background: hsl(0, 78%, 62%);
+}
+
+#calculator::before {
+    background: hsl(212, 86%, 64%);
 }
 
 @media (max-width: 500px) {
