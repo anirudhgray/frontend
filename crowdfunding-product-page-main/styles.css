@@ -5,7 +5,7 @@ body {
     margin: 0;
     background: hsl(0, 0%, 98%);
 }
-h1, p {
+h1, p, h3, h2 {
     margin: 0;
 }
 a {
@@ -79,6 +79,7 @@ a:hover {
     border-radius: 10px;
     margin-bottom: 25px;
     padding: 50px;
+    border: 1px solid hsl(0, 0%, 95%);
 }
 
 #product-title-div h1, .stat-title {
@@ -114,13 +115,16 @@ button {
     border-radius: 30px;
     border: 0px solid transparent;
     font-family: 'Commissioner', sans-serif;
-    font-weight:600;
+    font-weight:500;
     font-size: 16px;
     padding: 17px;
     padding-left: 40px;
     padding-right: 40px;
     background-color: hsl(176, 50%, 47%);
     color: white;
+}
+button:hover {
+    background: hsl(176, 72%, 28%);
 }
 
 
@@ -158,4 +162,58 @@ button {
 #prg-done {
     background: hsl(176, 50%, 47%);
     width: 89.914%;
+}
+
+.subheadings {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 600;
+    color:hsl(0, 0%, 0%);
+    font-size: 21px;
+}
+
+#about-div {
+    padding-bottom: 25px;
+}
+
+#about-div>p {
+    margin-bottom: 40px;
+}
+
+#about-div>.subheadings {
+    margin-bottom: 40px;
+}
+
+#about-subflex {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-subdiv {
+    padding: 33px;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.about-subdiv>p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container-rowflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pledge-text {
+    margin-left: auto;
+    color: hsl(176, 50%, 47%);
+    font-weight: 500;
+}
+
+.left-p {
+    display: inline;
+    margin-right: auto;
+    padding-left: 10px;
 }
