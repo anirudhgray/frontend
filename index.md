@@ -1,5 +1,6 @@
 # frontend
 
-- [order summary](./order-summary-component/index.html)
-- [3 column preview card](./3-column-preview-card-component/index.html)
-- [article preview](./article-preview-component-master/index.html)
+- [order summary](./order-summary-component)
+- [3 column preview card](./3-column-preview-card-component)
+- [article preview](./article-preview-component-master)
+- [4 card component](./four-card-feature-section-master)
