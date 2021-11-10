@@ -69,12 +69,43 @@ body {
     font-family: 'Manrope', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    color: hsl(210, 46%, 95%);
+    color: hsl(214, 17%, 51%);
     margin: 0;
 }
 
 .auth-info {
     padding-right: 170px;
+}
+
+@keyframes socialanim {
+    from {width:54px; height:12px; bottom: 292px;}
+    to {height: 49px; width: 220px; bottom: 325px;}
+}
+
+.socialflex {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sharetext {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    color: hsl(210, 46%, 95%);
+}
+
+@keyframes icon {
+    from {width: 20px; height: 20px;}
+    to {width: 25px; height: 25px;}
+}
+
+.social-icon:hover {
+    animation-name: icon;
+    animation-duration: 0.2s;
+    width: 25px; height: 25px;
 }
 
 .social {
@@ -85,7 +116,23 @@ body {
     position: relative;
     bottom: 325px;
     left:288px;
+    animation-name: socialanim;
+    animation-duration: 0.4s;
 }
+.social::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border:15px solid transparent;
+    border-top-color: hsl(217, 19%, 35%);
+    border-bottom: 0;
+    margin-left: -15px;
+    margin-bottom: -15px;
+}
+
 
 @media (max-width: 500px) {
     .main {
@@ -106,6 +153,10 @@ body {
         margin-top: 40px;
         margin-bottom: -15px;
     }
+    @keyframes socialanim {
+        from {width:67px; height:14px; bottom: 185px;}
+        to {height: 70px; width: 335px; bottom: 245px;}
+    }
     .social {
         height: 70px;
         width: 335px;
@@ -116,5 +167,18 @@ body {
         position: relative;
         bottom: 245px;
         left: 0;
+    }
+    .social::after{
+        content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 0;
+    border-top-color: hsl(217, 19%, 35%);
+    border-bottom: 0;
+    margin-left: 0;
+    margin-bottom: 0;
     }
 }
