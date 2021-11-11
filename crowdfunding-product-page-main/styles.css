@@ -228,10 +228,96 @@ button:hover {
   font-weight: 500;
 }
 
+.count-left {
+  display: flex;
+  align-items: center;
+}
+
 .left-p {
   display: inline;
   margin-right: auto;
   padding-left: 10px;
+}
+
+@media (max-width: 800px) {
+  #main {
+    width: 335px;
+  }
+
+  .main-subdiv {
+    padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  p {
+    font-size: 14.5px;
+  }
+
+  #product-title-div h1 {
+    font-family: "Commissioner", sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+  #bookmark-button {
+    display: none;
+  }
+
+  #back-button {
+    margin-right: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  #bm-icon {
+    position: static;
+  }
+
+  #back-bm-buttons {
+    justify-content: space-between;
+  }
+
+  #stats {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    align-items: center;
+  }
+
+  #stats > div {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .stat-title {
+    font-family: "Commissioner", sans-serif;
+    color: black;
+    font-weight: 800;
+    font-size: 32px;
+  }
+
+  .about-subdiv .subheadings {
+    font-family: "Commissioner", sans-serif;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+
+  .container-rowflex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pledge-text {
+    margin-left: 0;
+  }
+
+  .count-left {
+    margin-bottom: 25px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
