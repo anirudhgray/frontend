@@ -16,16 +16,23 @@
 </head>
 
 <body>
+  <div class="modal-bg"></div>
 
-  <div id="navbar" role="navigation">
+  <div id="navbar" class="navbar" role="navigation">
     <img alt="logo" id="logo" src="./images/logo.svg">
-    <a class="nav-links" href="#">About</a>
-    <a class="nav-links" href="#">Discover</a>
-    <a class="nav-links" href="#">Get Started</a>
+    <div class="hidden-mobile-nav">
+      <a class="nav-links" href="#">About</a>
+      <a class="nav-links" href="#">Discover</a>
+      <a class="nav-links" href="#">Get Started</a>
+    </div>
+    <a href="javascript:void(0);" id="hamburger">
+      <img src="./images/icon-hamburger.svg">
+    </a>
   </div>
 
   <div id="banner" role="banner">
-    <img alt="banner" src="./images/image-hero-desktop.jpg">
+    <img alt="banner" id="mobile-hero" src="./images/image-hero-mobile.jpg">
+    <img alt="banner" id="desktop-hero" src="./images/image-hero-desktop.jpg">
   </div>
 
   <img alt="mastercraft logo" id="mc-logo" src="./images/logo-mastercraft.svg">
@@ -126,6 +133,7 @@
 
     </div>
 
+    <script src="./main.js"></script>
 </body>
 
 </html>
