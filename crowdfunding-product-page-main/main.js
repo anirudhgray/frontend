@@ -1,5 +1,7 @@
 let modalBG = document.querySelector(".modal-bg")
 let menuIcon = document.getElementById("menu-image")
+let bmIcon = document.querySelector("#bm-icon")
+let bmButton = document.querySelector("#bookmark-button")
 
 document.addEventListener("DOMContentLoaded", () => {
     modalBG.style.display = "none";
@@ -24,3 +26,18 @@ document.getElementById("hamburger").addEventListener("click", () => {
         menuIcon.src = "./images/icon-hamburger.svg"
     }
 })
+
+function bookmark() {
+    if (bmIcon.dataset.state === "bookmarked") {
+        bmIcon.dataset.state = "not-bookmarked"
+        bmIcon.src = "./images/icon-bookmark.svg"
+        bmButton.style.color = "#7a7a7a"
+    } else {
+        bmIcon.dataset.state = "bookmarked"
+        bmIcon.src = "./images/greenbm.svg"
+        bmButton.style.color = "hsl(176, 72%, 28%)"
+    }
+}
+
+bmIcon.addEventListener("click", bookmark)
+bmButton.addEventListener("click", bookmark)
