@@ -7,7 +7,7 @@ body {
   background: #fafafa;
 }
 
-h1, p, h3, h2 {
+h1, p, h3, h2, h4 {
   margin: 0;
 }
 
@@ -25,9 +25,82 @@ a:hover {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.199);
+  background-color: rgba(0, 0, 0, 0.397);
   z-index: 50;
   display: none;
+}
+
+#back-modal {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750px;
+  top: 185px;
+}
+
+#back-modal h4 {
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+#modal-cross {
+  position: relative;
+  bottom: 52px;
+  left: 655px;
+}
+
+#back-modal > p {
+  padding-bottom: 25px;
+}
+
+.pledge-radio-div {
+  padding: 33px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  padding-right: 23px;
+}
+
+.modal-text {
+  margin-left: 0px;
+}
+
+.modal-text .container-rowflex {
+  margin-bottom: 20px;
+}
+
+.modal-text .subheadings {
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.modal-text .pledge-text {
+  margin-right: auto;
+  margin-left: 0px;
+}
+
+.modal-text .stat-title {
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.radio-toggle-div {
+  display: flex;
+  width: 380px;
+}
+
+.radio {
+  position: relative;
+  right: 15px;
+  bottom: 28px;
 }
 
 #navbar {

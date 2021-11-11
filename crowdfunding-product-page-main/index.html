@@ -16,8 +16,38 @@
 </head>
 
 <body>
-  <div class="modal-bg"></div>
+  <div class="modal-bg" role="none"></div>
 
+  <!-- BACK MODAL -->
+  <div id="back-modal" class="main-subdiv" role="none">
+    <h4 class="subheadings">Back this project</h4>
+    <img id="modal-cross" src="./images/icon-close-modal.svg">
+    <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
+
+    <div class="about-subflex">
+
+      <div class="pledge-radio-div" id="bnone">
+        <div class="container-rowflex">
+          <img class="radio" src="./images/radio.svg" data-item="none" data-toggle="off">
+          <div class="modal-text">
+            <div class="container-rowflex">
+              <h3 class="subheadings">Pledge with no reward</h3>
+              <div class="radio-toggle-div" id="dnone">
+                <p class="pledge-text">Pledge however much you want!</p>
+                <p class="stat-title">inf</p>
+                <p>left</p>
+              </div>
+            </div>
+            <p>Choose to support us without a reward if you simply believe in our project. As a backer,
+              you will be signed up to receive product updates via email.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
   <div id="navbar" class="navbar" role="navigation">
     <img alt="logo" id="logo" src="./images/logo.svg">
     <div class="hidden-mobile-nav">
@@ -30,6 +60,7 @@
     </a>
   </div>
 
+  <!-- BANNER -->
   <div id="banner" role="banner">
     <img alt="banner" id="mobile-hero" src="./images/image-hero-mobile.jpg">
     <img alt="banner" id="desktop-hero" src="./images/image-hero-desktop.jpg">
@@ -37,19 +68,21 @@
 
   <img alt="mastercraft logo" id="mc-logo" src="./images/logo-mastercraft.svg">
 
+  <!-- MAIN -->
   <div id="main" role="main">
 
+    <!-- TITLE DIV -->
     <div class="main-subdiv" id="product-title-div">
-
       <h1>Mastercraft Bamboo Monitor Riser</h1>
       <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
       <div id="back-bm-buttons">
-        <button class="green-button" id="back-button">Back this project</button>
+        <button class="green-button back-buttons" id="back-button" data-item="none">Back this project</button>
         <img alt="bm icon" id="bm-icon" src="./images/icon-bookmark.svg" data-state="not-bookmarked">
         <button id="bookmark-button">Bookmark</button>
       </div>
     </div>
 
+    <!-- STATISTICS -->
     <div class="main-subdiv" id="stats-div">
       <div id="stats">
         <div>
@@ -70,6 +103,7 @@
       </div>
     </div>
 
+    <!-- ABOUT DIV -->
     <div class="main-subdiv" id="about-div">
 
       <h2 class="subheadings">About this project</h2>
@@ -92,7 +126,8 @@
               <p class="stat-title" id="bamboo-left">101</p>
               <p class="left-p">left</p>
             </div>
-            <button class="green-button reward-button" data-item="bamboo" id="bamboo-reward">Select Reward</button>
+            <button class="green-button reward-button back-buttons" data-item="bamboo" id="bamboo-reward">Select
+              Reward</button>
           </div>
         </div>
 
@@ -108,7 +143,8 @@
               <p class="stat-title" id="black-edition-left">64</p>
               <p class="left-p">left</p>
             </div>
-            <button class="green-button reward-button" data-item="black-edition" id="black-edition-reward">Select
+            <button class="green-button reward-button back-buttons" data-item="black-edition"
+              id="black-edition-reward">Select
               Reward</button>
           </div>
         </div>
@@ -125,7 +161,7 @@
               <p class="stat-title" id="mahogany-left">0</p>
               <p class="left-p">left</p>
             </div>
-            <button class="green-button reward-button" data-item="mahogany" id="mahogany-reward">Select
+            <button class="green-button reward-button back-buttons" data-item="mahogany" id="mahogany-reward">Select
               Reward</button>
           </div>
         </div>
