@@ -60,19 +60,23 @@ function bookmark() {
 bmIcon.addEventListener("click", bookmark)
 bmButton.addEventListener("click", bookmark)
 
-function toggleModal() {
+function toggleModal(evt) {
     if (backModal.style.display === "block") {
         backModal.style.display = "none";
     } else if (backModal.style.display === "none") {
+        if (evt.currentTarget.dataset.item !== "none") {
+            radio = document.getElementById("radio-" + evt.currentTarget.dataset.item)
+            radio.click()
+        }
         backModal.style.display = "block";
     }
 }
 
 backButtons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (evt) => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
         toggleModalBackground()
-        toggleModal()
+        toggleModal(evt)
     })
 })
 
@@ -142,7 +146,6 @@ pledgeForms.forEach(form => {
         pledgeVal = form.children[0].value
         let excl = document.getElementById("excl-" + item)
         let dolla = document.getElementById("dolla-" + item)
-        console.log(pledgeVal)
         if (pledgeVal < form.children[0].dataset.min) {
             excl.style.display = "block"
             dolla.style.left = "70.5px"
