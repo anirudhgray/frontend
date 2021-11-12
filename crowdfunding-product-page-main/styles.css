@@ -354,6 +354,7 @@ button:disabled {
 #prg-done {
   background: #3cb4ac;
   width: 89.914%;
+  max-width: 100%;
 }
 
 .subheadings {

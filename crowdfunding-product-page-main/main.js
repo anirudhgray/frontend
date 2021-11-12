@@ -38,9 +38,12 @@ function toggleModalBackground() {
 
 document.getElementById("hamburger").addEventListener("click", () => {
     toggleModalBackground()
+    backModal.style.display = "none"
+    confModal.style.display = "none"
     let x = document.getElementById("navbar");
     if (x.className === "navbar") {
         x.className += " responsive";
+        modalBG.style.display = "block"
         menuIcon.src = "./images/icon-close-menu.svg"
     } else {
         x.className = "navbar";
@@ -67,10 +70,8 @@ function toggleModal(evt = "none") {
     if (backModal.style.display === "block") {
         backModal.style.display = "none";
     } else if (backModal.style.display === "none") {
-        if (evt.currentTarget.dataset.item !== "none") {
-            radio = document.getElementById("radio-" + evt.currentTarget.dataset.item)
-            radio.click()
-        }
+        radio = document.getElementById("radio-" + evt.currentTarget.dataset.item)
+        radio.click()
         backModal.style.display = "block";
     }
 }
@@ -155,8 +156,10 @@ pledgeForms.forEach(form => {
         } else {
             excl.style.display = "none"
             dolla.style.left = "117px"
-            document.getElementById(item + "-left-modal").textContent -= 1
-            document.getElementById(item + "-left").textContent -= 1
+            if (document.getElementById(item + "-left-modal").textContent !== "") {
+                document.getElementById(item + "-left-modal").textContent -= 1
+                document.getElementById(item + "-left").textContent -= 1
+            }
             amountBacked.textContent = "$" + String(Number(amountBacked.textContent.slice(1)) + Number(pledgeVal))
             document.getElementById("number-backers").textContent = Number(document.getElementById("number-backers").textContent) + 1
             document.getElementById("prg-done").style.width = `${amountBacked.textContent.slice(1) * 100 / 100000}%`
@@ -168,6 +171,7 @@ pledgeForms.forEach(form => {
 
 function toggleModalCompletion() {
     if (confModal.style.display === "none") {
+        window.scrollTo({ top: 150, behavior: 'smooth' });
         confModal.style.display = "flex"
     } else {
         confModal.style.display = "none"
