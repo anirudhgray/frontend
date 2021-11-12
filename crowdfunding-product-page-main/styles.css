@@ -61,10 +61,14 @@ a:hover {
 }
 
 .pledge-radio-div {
-  padding: 33px;
   border: 1px solid #cccccc;
   border-radius: 10px;
   margin-bottom: 25px;
+  overflow: hidden;
+}
+
+.pledge-radio-main {
+  padding: 33px;
   padding-right: 23px;
 }
 
@@ -105,6 +109,37 @@ a:hover {
   position: relative;
   right: 15px;
   bottom: 28px;
+}
+
+.pledge-radio-money {
+  display: none;
+}
+
+.pledge-radio-div.active .pledge-radio-money {
+  display: block;
+  border-top: 1px solid #cccccc;
+  padding: 23px;
+}
+
+.pledge-radio-money input {
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid #3cb4ac;
+  padding: 17px;
+  padding-left: 60px;
+  padding-right: 40px;
+  font-family: "Commissioner", sans-serif;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  width: 147.23px;
+  height: 53.2px;
+  margin-right: 10px;
+}
+
+#dolla {
+  position: relative;
+  left: 117px;
 }
 
 #navbar {

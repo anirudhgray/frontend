@@ -9,9 +9,6 @@ let radioButtons = document.querySelectorAll(".radio")
 document.addEventListener("DOMContentLoaded", () => {
     modalBG.style.display = "none";
     backModal.style.display = "none";
-    document.querySelectorAll(".radio-toggle-div").forEach(div => {
-        div.style.display = "none"
-    })
 })
 
 function toggleModalBackground() {
@@ -71,23 +68,28 @@ document.getElementById("modal-cross").addEventListener("click", () => {
 
 function toggleRadio(evt) {
     let button = evt.currentTarget
-    border = document.getElementById("b" + button.dataset.item)
-    div = document.getElementById("d" + button.dataset.item)
+    let div = document.getElementById("b" + button.dataset.item)
     if (button.dataset.toggle === "off") {
-        border.style.borderColor = "hsl(176, 50%, 47%)"
-        border.style.boxShadow = "0 0 0 1px hsl(176, 50%, 47%)"
-        div.style.display = "flex"
+        radioCheck(button)
+        div.style.borderColor = "hsl(176, 50%, 47%)"
+        div.style.boxShadow = "0 0 0 1px hsl(176, 50%, 47%)"
         button.dataset.toggle = "on"
         button.src = "./images/radio-selected.svg"
-
+        div.className += " active"
     } else {
-        border.style.borderColor = "hsl(0, 0%, 80%)"
-        border.style.boxShadow = "none"
-        border.style.borderWidth = "1px"
-        div.style.display = "none"
+        div.style.borderColor = "hsl(0, 0%, 80%)"
+        div.style.boxShadow = "none"
         button.dataset.toggle = "off"
         button.src = "./images/radio.svg"
+        div.className = "pledge-radio-div"
     }
+}
+function radioCheck(check) {
+    radioButtons.forEach(button => {
+        if (button.dataset.toggle === "on" & button != check) {
+            toggleRadio(button.click())
+        }
+    })
 }
 
 radioButtons.forEach(button => {
