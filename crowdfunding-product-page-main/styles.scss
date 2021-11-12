@@ -1,0 +1,557 @@
+$cyan: hsl(176, 50%, 47%);
+$darkcyan: hsl(176, 72%, 28%);
+$darkgrey: hsl(0, 0%, 48%);
+$lightgrey: hsl(0, 0%, 98%);
+
+@mixin font($color,$size, $weight) {
+    font-family: 'Commissioner', sans-serif;
+    color: $color;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: $lightgrey;
+}
+h1, p, h3, h2, h4 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.modal-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+    z-index: 50;
+    display: none;
+}
+
+#modal-cross:hover {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(99%) saturate(0%) hue-rotate(186deg) brightness(106%) contrast(101%);;
+}
+#back-modal {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 750px;
+    top: 185px;
+}
+
+#back-modal h4 {
+    @include font(black, 25px, 600)
+}
+
+#modal-cross {
+    position: relative;
+    bottom: 52px;
+    left: 655px
+}
+
+#back-modal>p {
+    padding-bottom: 25px;
+}
+.pledge-radio-div {
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.pledge-radio-main {
+    padding: 33px;
+    padding-right: 23px;
+}
+.modal-text {
+    margin-left: 0px;
+}
+.modal-text .container-rowflex {
+    margin-bottom: 20px;
+    justify-content: start;
+}
+
+.modal-text .subheadings {
+    @include font(black, 16px, 700);
+    min-width:fit-content
+}
+
+.modal-text .pledge-text {
+    margin-right: auto;
+    margin-left: 15px
+} 
+
+.modal-text .stat-title {
+    @include font(black, 16px, 700);
+    margin-right:5px;
+    
+}
+
+.radio-toggle-div {
+    display: flex;
+    width: 100%;
+}
+
+.radio {
+    position: relative;
+    right: 15px;
+    bottom: 28px;
+}
+
+.pledge-radio-money {
+    display: none;
+}
+
+.pledge-radio-div.active .pledge-radio-money {
+    display: block;
+    border-top: 1px solid hsl(0, 0%, 80%);
+    padding: 23px;
+}
+.pledge-radio-money input {
+    outline: none;
+    border-radius: 30px;
+    border: 1px solid $cyan;
+    padding: 17px;
+    padding-left: 60px;
+    padding-right: 40px;
+    @include font(black, 16px, 500);
+    width: 147.23px;
+    height: 53.2px;
+    margin-right: 10px;
+}
+.dolla {
+    position: relative;
+    left: 117px;
+}
+.excl {
+    z-index: 10;
+    position: relative;
+    left: 45px;
+    color: red;
+}
+
+#conf-modal {
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 540px;
+    top: 465px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#check-icon {
+    margin-bottom: 50px;
+    width: 84px;
+    height: 84px;
+}
+#conf-modal .subheadings {
+    @include font(black, 24px, 700)
+}
+#conf-modal p {
+    margin-top: 20px;
+    margin-bottom: 42px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100px;
+    padding: 150px;
+    padding-top: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 0;
+    background-image: linear-gradient(black,transparent);
+
+}
+#logo {
+    margin-right: auto;
+}
+.nav-links {
+    margin-inline-start: 30px;
+    @include font(white,16px ,400);
+}
+#hamburger {
+    display: none;
+}
+
+#banner {
+    height: 410px;
+    overflow: hidden;
+}
+#mobile-hero {
+    display: none;
+}
+#desktop-hero {
+    width: 100%;
+    min-width: 1440px;
+}
+
+#mc-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 290px;
+    z-index: 1;
+}
+
+#main {
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 318px;
+    z-index: 0;
+}
+#main::after {
+    content: "";
+    bottom: -100px;
+    height: 100px;
+    width: 1px;
+}
+
+.main-subdiv {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 50px;
+    border: 1px solid hsl(0, 0%, 95%);
+}
+
+#product-title-div h1, .stat-title {
+    @include font(black, 28px, 800);
+}
+
+#product-title-div h1 {
+    margin-bottom: 18px;
+}
+
+#product-title-div h1, #product-title-div p {
+    text-align: center;
+}
+
+p {
+    @include font($darkgrey, 16px, 400);
+    line-height: 1.6;
+}
+
+#back-bm-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    outline: none;
+    border-radius: 30px;
+    border: 0px solid transparent;
+    padding: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: $cyan;
+    @include font(white, 16px, 500);
+}
+button:hover {
+    background: $darkcyan;
+}
+button:disabled {
+    background: $darkgrey;
+}
+
+
+#back-button {
+    margin-right: auto;
+}
+
+#bm-icon {
+    position: relative;
+    left: 56px;
+}
+
+#bookmark-button {
+    background: hsla(0, 0%, 92%, 0.377);
+    @include font($darkgrey, 16px, 500);
+    padding-left: 73px;
+}
+#bookmark-button:hover, #bm-icon:hover ~ #bookmark-button {
+    opacity: 0.5;
+    background: hsl(0, 0%, 92%);
+}
+
+#stats {
+    columns: 3;
+    column-rule: 1px solid hsl(0, 0%, 84%);
+    column-gap: 80px;
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 12px;
+    border-radius: 20px;
+}
+
+#prg-total {
+    background: hsl(0, 0%, 96%);
+}
+
+#prg-done {
+    background: $cyan;
+    width: 89.914%;
+    max-width: 100%
+}
+
+.subheadings {
+    @include font(hsl(0, 0%, 0%), 21px, 600);
+}
+
+#about-div {
+    padding-bottom: 25px;
+}
+
+#about-div>p {
+    margin-bottom: 40px;
+}
+
+#about-div>.subheadings {
+    margin-bottom: 40px;
+}
+
+#about-subflex {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-subdiv {
+    padding: 33px;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.about-subdiv>p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container-rowflex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pledge-text {
+    margin-left: auto;
+    color: $cyan;
+    font-weight: 500;
+}
+
+.count-left {
+    display: flex;
+    align-items: center;
+}
+
+.left-p {
+    display: inline;
+    margin-right: auto;
+    padding-left: 10px;
+}
+
+@media (max-width:800px) {
+    
+    #back-modal {
+        width: 335px;
+    }
+    #modal-cross {
+        left: 275px;
+        bottom: 20px;
+    }
+    #back-modal h3 {
+        position: relative;
+        left: 40px;
+    }
+    .pledge-radio-main {
+        position: relative;
+        padding-bottom: 80px;
+    }
+    .radio {
+        position: absolute;
+        top: 29px;
+        right: 230px;
+    }
+    .pledge-radio-main .pledge-text {
+        position: relative;
+        left: 25px;
+    } 
+    .stat-title-modal, .lef {
+        position: relative;
+        top: 190px;
+        right: 180px;
+    }
+    .pledge-radio-money .container-rowflex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pledge-form input {
+        width: 110px;
+        padding: 20px;
+        padding-left: 45px;
+    }
+    .continue-button {
+        width: 110px;
+        padding: 17px;
+        height: 53.2px;
+    }
+    .pledge-radio-money {
+        display: relative;
+    }
+    .dolla {
+        display: none;
+    }
+    .excl {
+        position:absolute;
+        margin-top: 19px;
+        margin-left: 90px;
+    }
+    .pledge-form {
+        margin-top: 23px;
+    }
+
+    #conf-modal {
+        width: 335px;
+        top: 190px;
+    }
+
+    #navbar {
+        top: -60px;
+        padding: 20px;
+        padding-top: 95px;
+        padding-bottom: 100px;
+        z-index: 1000;
+    }
+    .hidden-mobile-nav {
+        display: none;
+    }
+    #hamburger {
+        display: block;
+    }
+    #navbar.responsive .hidden-mobile-nav {
+        position: absolute;
+        z-index: 1000;
+        display:flex;
+        flex-direction: column;
+        top: 147px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: white;
+        border-radius: 10px;
+        width: 335px;
+        overflow: auto;
+    }
+    #navbar.responsive .hidden-mobile-nav a {
+        @include font(black, 18px, 500);
+        margin:0;
+        border: 1px solid hsl(0, 0%, 92%);
+        padding: 20px;
+    }
+
+    #banner {
+        height: 280px;
+    }
+
+    #mc-logo {
+        position: absolute;
+        top: 205px;
+        z-index: 1;
+    }
+
+    #main {
+        top: 233px;
+        width: 335px;
+    }
+
+    .main-subdiv {
+        padding: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    p {
+        font-size: 14.5px;
+    }
+
+    #product-title-div h1 {
+        @include font(black, 22px, 800);
+    }
+    #bookmark-button {
+        display: none;
+    }
+    #back-button {
+        margin-right: 0;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    #bm-icon {
+        position: static;
+    }
+    #back-bm-buttons {
+        justify-content: space-between;
+    }
+
+    #stats {
+        display: flex;     
+        flex-direction: column;
+        margin-bottom: 0;
+        align-items: center;
+    }
+    #stats>div {
+        margin-bottom: 25px;
+        text-align: center
+    }
+    .stat-title {
+        @include font(black, 32px, 800);
+    }
+
+    .about-subdiv .subheadings {
+        @include font(hsl(0, 0%, 0%), 16px, 600);
+        margin-bottom: 7px;
+    }
+    .container-rowflex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .pledge-text {
+        margin-left: 0;
+    }
+    .count-left {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width:376px) {
+    #desktop-hero {
+        display: none;
+    }
+    #mobile-hero {
+        display: block;
+        height: 280px;
+        width: 375px;
+    }
+}
