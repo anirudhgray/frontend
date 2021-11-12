@@ -1,5 +1,6 @@
 let modalBG = document.querySelector(".modal-bg")
 let backModal = document.querySelector("#back-modal")
+let confModal = document.getElementById("conf-modal")
 let menuIcon = document.getElementById("menu-image")
 let bmIcon = document.querySelector("#bm-icon")
 let bmButton = document.querySelector("#bookmark-button")
@@ -8,10 +9,12 @@ let radioButtons = document.querySelectorAll(".radio")
 let aboutButtons = document.querySelectorAll(".reward-button")
 let pledgeForms = document.querySelectorAll(".pledge-form")
 let excls = document.querySelectorAll(".excl")
+let amountBacked = document.getElementById("amount-backed")
 
 document.addEventListener("DOMContentLoaded", () => {
     modalBG.style.display = "none";
     backModal.style.display = "none";
+    confModal.style.display = "none";
     aboutButtons.forEach(b => {
         item = b.dataset.item
         disableReward(item, "about")
@@ -34,7 +37,7 @@ function toggleModalBackground() {
 }
 
 document.getElementById("hamburger").addEventListener("click", () => {
-    toggleModal()
+    toggleModalBackground()
     let x = document.getElementById("navbar");
     if (x.className === "navbar") {
         x.className += " responsive";
@@ -60,7 +63,7 @@ function bookmark() {
 bmIcon.addEventListener("click", bookmark)
 bmButton.addEventListener("click", bookmark)
 
-function toggleModal(evt) {
+function toggleModal(evt = "none") {
     if (backModal.style.display === "block") {
         backModal.style.display = "none";
     } else if (backModal.style.display === "none") {
@@ -146,12 +149,30 @@ pledgeForms.forEach(form => {
         pledgeVal = form.children[0].value
         let excl = document.getElementById("excl-" + item)
         let dolla = document.getElementById("dolla-" + item)
-        if (pledgeVal < form.children[0].dataset.min) {
+        if (Number(pledgeVal) < Number(form.children[0].dataset.min)) {
             excl.style.display = "block"
             dolla.style.left = "70.5px"
         } else {
             excl.style.display = "none"
             dolla.style.left = "117px"
+            document.getElementById(item + "-left-modal").textContent -= 1
+            document.getElementById(item + "-left").textContent -= 1
+            amountBacked.textContent = "$" + String(Number(amountBacked.textContent.slice(1)) + Number(pledgeVal))
+            document.getElementById("number-backers").textContent = Number(document.getElementById("number-backers").textContent) + 1
+            document.getElementById("prg-done").style.width = `${amountBacked.textContent.slice(1) * 100 / 100000}%`
+            toggleModal()
+            toggleModalCompletion()
         }
     })
 })
+
+function toggleModalCompletion() {
+    if (confModal.style.display === "none") {
+        confModal.style.display = "flex"
+    } else {
+        confModal.style.display = "none"
+        toggleModalBackground()
+    }
+}
+
+document.getElementById("conf-button").addEventListener("click", toggleModalCompletion)
