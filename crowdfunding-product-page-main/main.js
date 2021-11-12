@@ -5,10 +5,19 @@ let bmIcon = document.querySelector("#bm-icon")
 let bmButton = document.querySelector("#bookmark-button")
 let backButtons = document.querySelectorAll(".back-buttons")
 let radioButtons = document.querySelectorAll(".radio")
+let aboutButtons = document.querySelectorAll(".reward-button")
 
 document.addEventListener("DOMContentLoaded", () => {
     modalBG.style.display = "none";
     backModal.style.display = "none";
+    aboutButtons.forEach(b => {
+        item = b.dataset.item
+        disableReward(item, "about")
+    })
+    radioButtons.forEach(r => {
+        item = r.dataset.item
+        disableReward(item, "modal")
+    })
 })
 
 function toggleModalBackground() {
@@ -56,6 +65,7 @@ function toggleModal() {
 
 backButtons.forEach(button => {
     button.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         toggleModalBackground()
         toggleModal()
     })
@@ -93,5 +103,29 @@ function radioCheck() {
 }
 
 radioButtons.forEach(button => {
-    button.addEventListener("click", (e) => toggleRadio(e))
+    button.addEventListener("click", addToggleRadio)
 })
+function addToggleRadio(ev) {
+    toggleRadio(ev)
+}
+
+function disableReward(itemName, flag) {
+    if (flag === "about") {
+        let count = document.getElementById(itemName + "-left")
+        if (count.textContent === "0") {
+            let element = document.getElementById("a" + itemName)
+            element.style.opacity = "0.4";
+            let button = document.getElementById(itemName + "-reward")
+            button.textContent = "Out of stock"
+            button.disabled = true
+        }
+    } else {
+        let count = document.getElementById(itemName + "-left-modal")
+        if (count.textContent === "0") {
+            let element = document.getElementById("b" + itemName)
+            element.style.opacity = "0.4";
+            let button = document.getElementById("radio-" + itemName)
+            button.removeEventListener("click", addToggleRadio)
+        }
+    }
+}

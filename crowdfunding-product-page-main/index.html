@@ -37,7 +37,7 @@
                 <h3 class="subheadings">Pledge with no reward</h3>
                 <div class="radio-toggle-div" id="dnone">
                   <p class="pledge-text"></p>
-                  <p class="stat-title"></p>
+                  <p class="stat-title" id="none-left-modal"></p>
                   <p></p>
                 </div>
               </div>
@@ -64,14 +64,14 @@
 
         <div class="pledge-radio-main">
           <div class="container-rowflex">
-            <img class="radio" src="./images/radio.svg" data-item="bamboo" data-toggle="off">
+            <img class="radio" id="radio-bamboo" src="./images/radio.svg" data-item="bamboo" data-toggle="off">
 
             <div class="modal-text">
               <div class="container-rowflex">
                 <h3 class="subheadings">Bamboo Stand</h3>
                 <div class="radio-toggle-div" id="dbamboo">
                   <p class="pledge-text">Pledge $25 or more</p>
-                  <p class="stat-title">101</p>
+                  <p class="stat-title" id="bamboo-left-modal">101</p>
                   <p>left</p>
                 </div>
               </div>
@@ -89,7 +89,7 @@
             <p id="dolla">$</p>
             <form class="pledge-form">
               <input type="text" value="25">
-              <button type="submit">Continue</button>
+              <button class="continue-button" type="submit" id="bamboo">Continue</button>
             </form>
           </div>
         </div>
@@ -99,14 +99,15 @@
 
         <div class="pledge-radio-main">
           <div class="container-rowflex">
-            <img class="radio" src="./images/radio.svg" data-item="black-edition" data-toggle="off">
+            <img class="radio" id="radio-black-edition" src="./images/radio.svg" data-item="black-edition"
+              data-toggle="off">
 
             <div class="modal-text">
               <div class="container-rowflex">
                 <h3 class="subheadings">Black Edition Stand</h3>
                 <div class="radio-toggle-div" id="dblack-edition">
                   <p class="pledge-text">Pledge $75 or more</p>
-                  <p class="stat-title">64</p>
+                  <p class="stat-title" id="black-edition-left-modal">64</p>
                   <p>left</p>
                 </div>
               </div>
@@ -123,7 +124,7 @@
             <p id="dolla">$</p>
             <form class="pledge-form">
               <input type="text" value="75">
-              <button type="submit">Continue</button>
+              <button class="continue-button" type="submit" id="black-edition">Continue</button>
             </form>
           </div>
         </div>
@@ -133,14 +134,14 @@
 
         <div class="pledge-radio-main">
           <div class="container-rowflex">
-            <img class="radio" src="./images/radio.svg" data-item="mahogany" data-toggle="off">
+            <img class="radio" id="radio-mahogany" src="./images/radio.svg" data-item="mahogany" data-toggle="off">
 
             <div class="modal-text">
               <div class="container-rowflex">
                 <h3 class="subheadings">Mahogany Special Edition</h3>
                 <div class="radio-toggle-div" id="dmahogany">
                   <p class="pledge-text">Pledge $200 or more</p>
-                  <p class="stat-title">0</p>
+                  <p class="stat-title" id="mahogany-left-modal">0</p>
                   <p>left</p>
                 </div>
               </div>
@@ -158,7 +159,7 @@
             <p id="dolla">$</p>
             <form class="pledge-form">
               <input type="text" value="200">
-              <button type="submit">Continue</button>
+              <button class="continue-button" type="submit" id="mahogany">Continue</button>
             </form>
           </div>
         </div>
@@ -234,7 +235,7 @@
         to allow notepads, pens, and USB sticks to be stored under the stand.</p>
 
       <div id="about-subflex">
-        <div class="about-subdiv">
+        <div class="about-subdiv" id="abamboo">
           <div class="container-rowflex">
             <h3 class="subheadings">Bamboo Stand</h3>
             <p class="pledge-text">Pledge $25 or more</p>
@@ -251,7 +252,7 @@
           </div>
         </div>
 
-        <div class="about-subdiv">
+        <div class="about-subdiv" id="ablack-edition">
           <div class="container-rowflex">
             <h3 class="subheadings">Black Edition Stand</h3>
             <p class="pledge-text">Pledge $75 or more</p>
@@ -269,7 +270,7 @@
           </div>
         </div>
 
-        <div class="about-subdiv">
+        <div class="about-subdiv" id="amahogany">
           <div class="container-rowflex">
             <h3 class="subheadings">Mahogany Special Stand</h3>
             <p class="pledge-text">Pledge $200 or more</p>
