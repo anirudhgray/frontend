@@ -70,7 +70,7 @@ function toggleRadio(evt) {
     let button = evt.currentTarget
     let div = document.getElementById("b" + button.dataset.item)
     if (button.dataset.toggle === "off") {
-        radioCheck(button)
+        radioCheck(evt)
         div.style.borderColor = "hsl(176, 50%, 47%)"
         div.style.boxShadow = "0 0 0 1px hsl(176, 50%, 47%)"
         button.dataset.toggle = "on"
@@ -84,10 +84,10 @@ function toggleRadio(evt) {
         div.className = "pledge-radio-div"
     }
 }
-function radioCheck(check) {
-    radioButtons.forEach(button => {
-        if (button.dataset.toggle === "on" & button != check) {
-            toggleRadio(button.click())
+function radioCheck() {
+    radioButtons.forEach(check => {
+        if (check.dataset.toggle === "on") {
+            check.click()
         }
     })
 }

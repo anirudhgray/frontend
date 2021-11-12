@@ -78,6 +78,7 @@ a:hover {
 
 .modal-text .container-rowflex {
   margin-bottom: 20px;
+  justify-content: start;
 }
 
 .modal-text .subheadings {
@@ -85,11 +86,12 @@ a:hover {
   color: black;
   font-weight: 700;
   font-size: 16px;
+  min-width: fit-content;
 }
 
 .modal-text .pledge-text {
   margin-right: auto;
-  margin-left: 0px;
+  margin-left: 15px;
 }
 
 .modal-text .stat-title {
@@ -102,7 +104,7 @@ a:hover {
 
 .radio-toggle-div {
   display: flex;
-  width: 380px;
+  width: 100%;
 }
 
 .radio {
