@@ -6,6 +6,8 @@ let bmButton = document.querySelector("#bookmark-button")
 let backButtons = document.querySelectorAll(".back-buttons")
 let radioButtons = document.querySelectorAll(".radio")
 let aboutButtons = document.querySelectorAll(".reward-button")
+let pledgeForms = document.querySelectorAll(".pledge-form")
+let excls = document.querySelectorAll(".excl")
 
 document.addEventListener("DOMContentLoaded", () => {
     modalBG.style.display = "none";
@@ -17,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     radioButtons.forEach(r => {
         item = r.dataset.item
         disableReward(item, "modal")
+    })
+    excls.forEach(excl => {
+        excl.style.display = "none"
     })
 })
 
@@ -129,3 +134,21 @@ function disableReward(itemName, flag) {
         }
     }
 }
+
+pledgeForms.forEach(form => {
+    form.addEventListener("submit", (evt) => {
+        evt.preventDefault()
+        item = form.dataset.item
+        pledgeVal = form.children[0].value
+        let excl = document.getElementById("excl-" + item)
+        let dolla = document.getElementById("dolla-" + item)
+        console.log(pledgeVal)
+        if (pledgeVal < form.children[0].dataset.min) {
+            excl.style.display = "block"
+            dolla.style.left = "70.5px"
+        } else {
+            excl.style.display = "none"
+            dolla.style.left = "117px"
+        }
+    })
+})

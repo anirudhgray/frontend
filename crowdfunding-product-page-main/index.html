@@ -51,9 +51,10 @@
         <div class="pledge-radio-money">
           <div class="container-rowflex">
             <p>Enter your pledge</p>
-            <p id="dolla">$</p>
-            <form class="pledge-form">
-              <input type="text">
+            <p class="excl" id="excl-none">Too low!</p>
+            <p class="dolla" id="dolla-none">$</p>
+            <form class="pledge-form" data-item="none">
+              <input type="text" value="0" data-min="0">
               <button type="submit">Continue</button>
             </form>
           </div>
@@ -86,9 +87,10 @@
         <div class="pledge-radio-money">
           <div class="container-rowflex">
             <p>Enter your pledge</p>
-            <p id="dolla">$</p>
-            <form class="pledge-form">
-              <input type="text" value="25">
+            <p class="excl" id="excl-bamboo">Too low!</p>
+            <p class="dolla" id="dolla-bamboo">$</p>
+            <form class="pledge-form" data-item="bamboo">
+              <input type="text" value="25" data-min="25">
               <button class="continue-button" type="submit" id="bamboo">Continue</button>
             </form>
           </div>
@@ -121,9 +123,10 @@
         <div class="pledge-radio-money">
           <div class="container-rowflex">
             <p>Enter your pledge</p>
-            <p id="dolla">$</p>
-            <form class="pledge-form">
-              <input type="text" value="75">
+            <p class="excl" id="excl-black-edition">Too low!</p>
+            <p class="dolla" id="dolla-black-edition">$</p>
+            <form class="pledge-form" data-item="black-edition">
+              <input type="text" value="75" data-min="75">
               <button class="continue-button" type="submit" id="black-edition">Continue</button>
             </form>
           </div>
@@ -156,9 +159,10 @@
         <div class="pledge-radio-money">
           <div class="container-rowflex">
             <p>Enter your pledge</p>
-            <p id="dolla">$</p>
-            <form class="pledge-form">
-              <input type="text" value="200">
+            <p class="excl" id="excl-mahogany">Too low!</p>
+            <p class="dolla" id="dolla-mahogany">$</p>
+            <form class="pledge-form" data-item="mahogany">
+              <input type="text" value="200" data-min="200">
               <button class="continue-button" type="submit" id="mahogany">Continue</button>
             </form>
           </div>

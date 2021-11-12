@@ -33,7 +33,7 @@ a:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.397);
+    background-color: rgba(0, 0, 0, 0.425);
     z-index: 50;
     display: none;
 }
@@ -130,9 +130,15 @@ a:hover {
     height: 53.2px;
     margin-right: 10px;
 }
-#dolla {
+.dolla {
     position: relative;
     left: 117px;
+}
+.excl {
+    z-index: 10;
+    position: relative;
+    left: 45px;
+    color: red;
 }
 
 #navbar {
