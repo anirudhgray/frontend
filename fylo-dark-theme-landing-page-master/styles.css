@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 h1, h2, h3, p, a {
   margin: 0;
   color: white;
@@ -16,7 +20,7 @@ body {
 }
 
 h1, h2 {
-  font-size: 36px;
+  font-size: 38px;
   font-weight: 700;
 }
 
@@ -31,6 +35,15 @@ button {
   border-radius: 20px;
   padding: 10px;
   border: 0px transparent solid;
+}
+
+.card {
+  height: 320px;
+  width: 320px;
+}
+
+.icon {
+  height: 88px;
 }
 
 .flex {
@@ -53,11 +66,6 @@ button {
   flex-direction: row;
 }
 
-.two {
-  display: inline-block;
-  column-count: 2;
-}
-
 .left {
   align-items: flex-start;
 }
@@ -78,12 +86,40 @@ button {
   width: 720px;
 }
 
+[role=article] {
+  margin-bottom: 50px;
+}
+
 .align-c {
   text-align: center;
 }
 
 .early {
-  width: 70%;
+  width: 75%;
+  justify-content: space-evenly;
+  margin-top: 70px;
+}
+
+[role=application] {
+  background-color: #1c2431;
+}
+
+.testi {
+  width: 410px;
+  padding: 40px;
+  padding-top: 55px;
+  background-color: #202a3c;
+  border-radius: 5px;
+}
+
+[role=grid] {
+  margin-bottom: 100px;
+}
+
+.avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
 @media (max-width: 1024px) {
@@ -96,8 +132,8 @@ button {
     flex-direction: column;
   }
 
-  .two {
-    columns: 1;
+  .early {
+    flex-direction: column;
   }
 }
 
