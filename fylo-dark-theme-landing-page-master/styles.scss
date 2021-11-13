@@ -1,0 +1,30 @@
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main {
+    width: 100%;
+    justify-content: space-between;
+}
+.col {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
+.two {
+    display: inline-block;
+    column-count: 2;
+}
+.left {
+    align-items: flex-start;
+}
+.footer-element {
+    flex-direction: row;
+}
