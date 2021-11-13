@@ -10,6 +10,9 @@
 
   <title>Fylo landing page with dark theme and features grid</title>
   <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,45 +21,47 @@
     <img alt="fylo logo" src="./images/logo.svg">
     <nav class="row-always flex">
       <a href="#">Features</a>
-      <a href="#">Team</a>
-      <a href="#">Sign In</a>
+      <a class="margin-l" href="#">Team</a>
+      <a class="margin-l" href="#">Sign In</a>
     </nav>
   </div>
 
   <div class="col main flex" role="banner">
-    <img alt="hero">
-    <h1>All your files in one secure location, accessible anywhere.</h1>
-    <p>Fylo stores all your most important files in one secure location. Access them wherever
-      you need, share and collaborate with friends family, and co-workers.</p>
-    <button>Get Started</button>
+    <img alt="hero" src="./images/illustration-intro.png">
+    <h1 class="align-c margin-t">All your files in one secure location, accessible anywhere.</h1>
+    <p class="align-c margin-t">Fylo stores all your most important files in one secure location.
+      Access them wherever you need, share and collaborate with
+      friends family, and co-workers.</p>
+    <button class="margin-t io">Get Started</button>
   </div>
 
   <div class="col main two flex" role="grid">
     <div class="col flex card">
       <img alt="access icon">
-      <h3>Access your files, anywhere</h3>
-      <p>The ability to use a smartphone, tablet, or computer to access your account means your
+      <h3 class="align-c">Access your files, anywhere</h3>
+      <p class="align-c">The ability to use a smartphone, tablet, or computer to access your account means your
         files follow you everywhere.</p>
     </div>
 
     <div class="col flex card">
       <img alt="security icon">
-      <h3>Security you can trust</h3>
-      <p>2-factor authentication and user-controlled encryption are just a couple of the security
+      <h3 class="align-c">Security you can trust</h3>
+      <p class="align-c">2-factor authentication and user-controlled encryption are just a couple of the security
         features we allow to help secure your files.</p>
     </div>
 
     <div class="col flex card">
       <img alt="collab icon">
-      <h3>Real-time collaboration</h3>
-      <p>Securely share files and folders with friends, family and colleagues for live collaboration.
+      <h3 class="align-c">Real-time collaboration</h3>
+      <p class="align-c">Securely share files and folders with friends, family and colleagues for live collaboration.
         No email attachments required.</p>
     </div>
 
     <div class="col flex card">
       <img alt="store icon">
-      <h3>Store any type of file</h3>
-      <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file types to
+      <h3 class="align-c">Store any type of file</h3>
+      <p class="align-c">Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all
+        file types to
         be securely stored and shared.</p>
     </div>
   </div>
@@ -113,18 +118,19 @@
   </div>
 
   <div class="col flex early" role="application">
-    <h2>Get early access today</h2>
-    <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+    <h3 class="align-c">Get early access today</h3>
+    <p class="align-c">It only takes a minute to sign up and our free starter tier is extremely generous. If you have
+      any
       questions, our support team would be happy to help you.</p>
     <form>
-      <input type="text">
-      <button>Get Started For Free</button>
+      <input type="text" class="io">
+      <button class="io">Get Started For Free</button>
     </form>
   </div>
 
   <div class="col main flex" role="navigation">
     <img alt="logo">
-    <div class="row768 main flex">
+    <div class="row768 flex">
       <div class="flex row-always">
         <img alt="loc">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
