@@ -1,5 +1,14 @@
-body, h1, h2, h3, p {
+h1, h2, h3, p, a {
   margin: 0;
+  color: white;
+}
+
+body {
+  background-color: #181f2a;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .flex {
@@ -9,7 +18,8 @@ body, h1, h2, h3, p {
 }
 
 .main {
-  width: 100%;
+  width: 94%;
+  margin-top: 30px;
   justify-content: space-between;
 }
 
@@ -17,7 +27,7 @@ body, h1, h2, h3, p {
   flex-direction: column;
 }
 
-.row {
+.row, .row1024 {
   flex-direction: row;
 }
 
@@ -30,8 +40,23 @@ body, h1, h2, h3, p {
   align-items: flex-start;
 }
 
-.footer-element {
+.row-always {
   flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+  .row1024 {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .row768 {
+    flex-direction: column;
+  }
+
+  .two {
+    columns: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
